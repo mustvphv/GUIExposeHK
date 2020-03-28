@@ -1,6 +1,13 @@
 # GUIExposeHK
 JavaFX app following ExposeHK rules
 
+## How to run GUIExposeHK:
+
+<pre><code>javac Main.java</code></pre>
+
+<pre><code>java Main</code></pre>
+
+
 ## Sources:
 
 https://docs.oracle.com/javafx/2/
