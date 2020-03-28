@@ -132,8 +132,9 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                    }
                }
 
-               filenameAvant = file.getName();
-                
+               if(filenameAvant.equals("null") == false){
+                   filenameAvant = file.getName();
+               }
                 
             }
         });
