@@ -110,30 +110,35 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                 //System.out.println("filename=" + file);
                 if(file != null){
 
-                //débloquer autre boutons
-                boutonAgrandir.setDisable(false);
-                boutonRetrecir.setDisable(true);
-                boutonFiltre1.setDisable(false);
-                boutonFiltre2.setDisable(false);
-                boutonFiltre3.setDisable(false);
-                boutonSansFiltre.setDisable(false);
+                    //débloquer autre boutons
+                    boutonAgrandir.setDisable(false);
+                    boutonRetrecir.setDisable(true);
+                    boutonFiltre1.setDisable(false);
+                    boutonFiltre2.setDisable(false);
+                    boutonFiltre3.setDisable(false);
+                    boutonSansFiltre.setDisable(false);
 
-                BoutonFichier btnFichierHandle = new BoutonFichier();
+                    BoutonFichier btnFichierHandle = new BoutonFichier();
 
-                btnFichierHandle.ActionAppuieSurBoutonFichier(hbox, file, 100, 100);
+                    btnFichierHandle.ActionAppuieSurBoutonFichier(hbox, file, 100, 100);
 
+                    filenameAvant = file.getAbsolutePath();
+
+                    btnAgrandirHandle.niveauAgrandissement = 0;
+                    boutonSansFiltre.fire();
                }
                else{
+                   
                    if(filenameAvant.equals("null")){
-                       //nothing
+                       return;
                    }
                    else{
                        file = new File(filenameAvant);
                    }
                }
 
-               if(filenameAvant.equals("null") == false){
-                   filenameAvant = file.getName();
+               if(filenameAvant.equals("null") != false){
+                   filenameAvant = file.getAbsolutePath();
                }
                 
             }
