@@ -33,7 +33,8 @@ import javafx.scene.input.KeyCodeCombination;
 import javafx.scene.input.KeyCombination;
 import javafx.stage.FileChooser;
 import javafx.scene.effect.DropShadow;
-
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 
 
 public class Main extends Application implements EventHandler<KeyEvent> {
@@ -107,8 +108,21 @@ public class Main extends Application implements EventHandler<KeyEvent> {
 
                 file = fileChooser.showOpenDialog(primaryStage);
 
-                //System.out.println("filename=" + file);
                 if(file != null){
+
+                   try{
+
+                       BufferedImage imageTestCorruptedFile = ImageIO.read(file);
+
+                       if(imageTestCorruptedFile == null){
+                           file = new File(filenameAvant);
+                           return;
+                       }
+
+                   } catch(IOException ex) {
+                       return;
+                   }
+
 
                     //débloquer autre boutons
                     boutonAgrandir.setDisable(false);
@@ -128,7 +142,6 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     boutonSansFiltre.fire();
                }
                else{
-                   
                    if(filenameAvant.equals("null")){
                        return;
                    }
