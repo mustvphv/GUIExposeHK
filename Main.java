@@ -667,7 +667,7 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     exposeHKShortcutsIndicationDisappear(hbox, pane, root);
                     boutonAgrandir.fire();
                 }
-                else if (combinationT.match(event)){
+                else if (combinationS.match(event)){
                     exposeHKShortcutsIndicationDisappear(hbox, pane, root);
                     boutonRetrecir.fire();
                 }
@@ -683,7 +683,7 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     exposeHKShortcutsIndicationDisappear(hbox, pane, root);
                     boutonFiltre3.fire();
                 }
-                else if (combinationS.match(event)){
+                else if (combinationT.match(event)){
                     exposeHKShortcutsIndicationDisappear(hbox, pane, root);
                     boutonSansFiltre.fire();
                 }
@@ -693,6 +693,7 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     Text texteW = new Text(20, 20, "+W");
                     Rectangle rectangleW = new Rectangle(18, 3, texteW.getBoundsInLocal().getWidth() + 7, 30);
                     rectangleW.setFill(Color.CORAL);
+                    rectangleW.setOpacity(0.4);
 
                     rectangleW.getStyleClass().add("rectW");
                     texteW.getStyleClass().add("textW");
@@ -702,25 +703,28 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     Text texteA = new Text(120, 20, "+A");
                     Rectangle rectangleA = new Rectangle(118, 3, texteA.getBoundsInLocal().getWidth() + 7, 30);
                     rectangleA.setFill(Color.YELLOW);
+                    rectangleA.setOpacity(0.4);
 
                     rectangleA.getStyleClass().add("rectA");
                     texteA.getStyleClass().add("textA");
                     pane.getChildren().addAll(rectangleA, texteA);
 
 
-                    //raccourcis +T
-                    Text texteT = new Text(240, 20, "+T");
-                    Rectangle rectangleT = new Rectangle(238, 3, texteT.getBoundsInLocal().getWidth() + 7, 30);
-                    rectangleT.setFill(Color.YELLOW);
+                    //raccourcis +S
+                    Text texteS = new Text(240, 20, "+S");
+                    Rectangle rectangleS = new Rectangle(238, 3, texteS.getBoundsInLocal().getWidth() + 7, 30);
+                    rectangleS.setFill(Color.YELLOW);
+                    rectangleS.setOpacity(0.4);
 
-                    rectangleT.getStyleClass().add("rectT");
-                    texteT.getStyleClass().add("textT");
-                    pane.getChildren().addAll(rectangleT, texteT);
+                    rectangleS.getStyleClass().add("rectS");
+                    texteS.getStyleClass().add("textS");
+                    pane.getChildren().addAll(rectangleS, texteS);
 
                     //raccourcis +R
                     Text texteR = new Text(330, 20, "+R");
                     Rectangle rectangleR = new Rectangle(328, 3, texteR.getBoundsInLocal().getWidth() + 7, 30);
                     rectangleR.setFill(Color.RED);
+                    rectangleR.setOpacity(0.4);
 
                     rectangleR.getStyleClass().add("rectR");
                     texteR.getStyleClass().add("textR");
@@ -731,6 +735,7 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     Text texteG = new Text(389, 20, "+G");
                     Rectangle rectangleG = new Rectangle(387, 3, texteR.getBoundsInLocal().getWidth() + 7, 30);
                     rectangleG.setFill(Color.GREEN);
+                    rectangleG.setOpacity(0.4);
 
                     rectangleG.getStyleClass().add("rectG");
                     texteG.getStyleClass().add("textG");
@@ -740,20 +745,23 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                     //raccourcis +B
                     Text texteB = new Text(449, 20, "+B");
                     Rectangle rectangleB = new Rectangle(447, 3, texteB.getBoundsInLocal().getWidth() + 7, 30);
+                    texteB.setOpacity(0.8);
                     rectangleB.setFill(Color.BLUE);
+                    rectangleB.setOpacity(0.4);
 
                     rectangleB.getStyleClass().add("rectB");
                     texteB.getStyleClass().add("textB");
                     pane.getChildren().addAll(rectangleB, texteB);
 
-                    //raccourcis +S
-                    Text texteS = new Text(520, 20, "+S");
-                    Rectangle rectangleS = new Rectangle(518, 3, texteS.getBoundsInLocal().getWidth() + 7, 30);
-                    rectangleS.setFill(Color.YELLOW);
+                    //raccourcis +T
+                    Text texteT = new Text(520, 20, "+T");
+                    Rectangle rectangleT = new Rectangle(518, 3, texteT.getBoundsInLocal().getWidth() + 7, 30);
+                    rectangleT.setFill(Color.YELLOW);
+                    rectangleT.setOpacity(0.4);
 
-                    rectangleS.getStyleClass().add("rectS");
-                    texteS.getStyleClass().add("textS");
-                    pane.getChildren().addAll(rectangleS, texteS);
+                    rectangleT.getStyleClass().add("rectT");
+                    texteT.getStyleClass().add("textT");
+                    pane.getChildren().addAll(rectangleT, texteT);
 
 
 
@@ -780,8 +788,8 @@ public class Main extends Application implements EventHandler<KeyEvent> {
         pane.getChildren().remove(pane.lookup(".rectA"));
         pane.getChildren().remove(pane.lookup(".textA"));
 
-        pane.getChildren().remove(pane.lookup(".rectT"));
-        pane.getChildren().remove(pane.lookup(".textT"));
+        pane.getChildren().remove(pane.lookup(".rectS"));
+        pane.getChildren().remove(pane.lookup(".textS"));
 
         pane.getChildren().remove(pane.lookup(".rectR"));
         pane.getChildren().remove(pane.lookup(".textR"));
@@ -792,8 +800,8 @@ public class Main extends Application implements EventHandler<KeyEvent> {
         pane.getChildren().remove(pane.lookup(".rectB"));
         pane.getChildren().remove(pane.lookup(".textB"));
 
-        pane.getChildren().remove(pane.lookup(".rectS"));
-        pane.getChildren().remove(pane.lookup(".textS"));
+        pane.getChildren().remove(pane.lookup(".rectT"));
+        pane.getChildren().remove(pane.lookup(".textT"));
     }
 
 
