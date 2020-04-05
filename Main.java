@@ -103,7 +103,7 @@ public class Main extends Application implements EventHandler<KeyEvent> {
 
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Sélectionner une image");
-                fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JPG", "*.jpg"), new FileChooser.ExtensionFilter("PNG", "*.png"));
+                fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Images (JPG, PNG OU JPEG)", "*.jpg", "*.png", "*.jpeg"));
 
 
                 file = fileChooser.showOpenDialog(primaryStage);
