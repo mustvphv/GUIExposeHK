@@ -690,20 +690,18 @@ public class Main extends Application implements EventHandler<KeyEvent> {
                 else if(event.getCode().toString().equals("CONTROL")){
 
                     //raccourcis +W
-                    Text texteW = new Text(20, 20, "+W");
-                    Rectangle rectangleW = new Rectangle(18, 3, texteW.getBoundsInLocal().getWidth() + 7, 30);
+                    Text texteW = new Text(20, 35, "+W");
+                    Rectangle rectangleW = new Rectangle(18, 20, texteW.getBoundsInLocal().getWidth() + 7, 25);
                     rectangleW.setFill(Color.CORAL);
-                    rectangleW.setOpacity(0.4);
 
                     rectangleW.getStyleClass().add("rectW");
                     texteW.getStyleClass().add("textW");
                     pane.getChildren().addAll(rectangleW, texteW);
 
                     //raccourcis +A
-                    Text texteA = new Text(120, 20, "+A");
-                    Rectangle rectangleA = new Rectangle(118, 3, texteA.getBoundsInLocal().getWidth() + 7, 30);
+                    Text texteA = new Text(120, 35, "+A");
+                    Rectangle rectangleA = new Rectangle(118, 20, texteA.getBoundsInLocal().getWidth() + 7, 25);
                     rectangleA.setFill(Color.YELLOW);
-                    rectangleA.setOpacity(0.4);
 
                     rectangleA.getStyleClass().add("rectA");
                     texteA.getStyleClass().add("textA");
@@ -711,20 +709,18 @@ public class Main extends Application implements EventHandler<KeyEvent> {
 
 
                     //raccourcis +S
-                    Text texteS = new Text(240, 20, "+S");
-                    Rectangle rectangleS = new Rectangle(238, 3, texteS.getBoundsInLocal().getWidth() + 7, 30);
+                    Text texteS = new Text(240, 35, "+S");
+                    Rectangle rectangleS = new Rectangle(238, 20, texteS.getBoundsInLocal().getWidth() + 7, 25);
                     rectangleS.setFill(Color.YELLOW);
-                    rectangleS.setOpacity(0.4);
 
                     rectangleS.getStyleClass().add("rectS");
                     texteS.getStyleClass().add("textS");
                     pane.getChildren().addAll(rectangleS, texteS);
 
                     //raccourcis +R
-                    Text texteR = new Text(330, 20, "+R");
-                    Rectangle rectangleR = new Rectangle(328, 3, texteR.getBoundsInLocal().getWidth() + 7, 30);
-                    rectangleR.setFill(Color.RED);
-                    rectangleR.setOpacity(0.4);
+                    Text texteR = new Text(330, 35, "+R");
+                    Rectangle rectangleR = new Rectangle(328, 20, texteR.getBoundsInLocal().getWidth() + 7, 25);
+                    rectangleR.setFill(Color.SALMON);
 
                     rectangleR.getStyleClass().add("rectR");
                     texteR.getStyleClass().add("textR");
@@ -732,10 +728,9 @@ public class Main extends Application implements EventHandler<KeyEvent> {
 
 
                     //raccourcis +G
-                    Text texteG = new Text(389, 20, "+G");
-                    Rectangle rectangleG = new Rectangle(387, 3, texteR.getBoundsInLocal().getWidth() + 7, 30);
-                    rectangleG.setFill(Color.GREEN);
-                    rectangleG.setOpacity(0.4);
+                    Text texteG = new Text(389, 35, "+G");
+                    Rectangle rectangleG = new Rectangle(387, 20, texteR.getBoundsInLocal().getWidth() + 7, 25);
+                    rectangleG.setFill(Color.MEDIUMSEAGREEN);
 
                     rectangleG.getStyleClass().add("rectG");
                     texteG.getStyleClass().add("textG");
@@ -743,21 +738,18 @@ public class Main extends Application implements EventHandler<KeyEvent> {
 
 
                     //raccourcis +B
-                    Text texteB = new Text(449, 20, "+B");
-                    Rectangle rectangleB = new Rectangle(447, 3, texteB.getBoundsInLocal().getWidth() + 7, 30);
-                    texteB.setOpacity(0.8);
-                    rectangleB.setFill(Color.BLUE);
-                    rectangleB.setOpacity(0.4);
+                    Text texteB = new Text(449, 35, "+B");
+                    Rectangle rectangleB = new Rectangle(447, 20, texteB.getBoundsInLocal().getWidth() + 7, 25);
+                    rectangleB.setFill(Color.CORNFLOWERBLUE);
 
                     rectangleB.getStyleClass().add("rectB");
                     texteB.getStyleClass().add("textB");
                     pane.getChildren().addAll(rectangleB, texteB);
 
                     //raccourcis +T
-                    Text texteT = new Text(520, 20, "+T");
-                    Rectangle rectangleT = new Rectangle(518, 3, texteT.getBoundsInLocal().getWidth() + 7, 30);
+                    Text texteT = new Text(520, 35, "+T");
+                    Rectangle rectangleT = new Rectangle(518, 20, texteT.getBoundsInLocal().getWidth() + 7, 25);
                     rectangleT.setFill(Color.YELLOW);
-                    rectangleT.setOpacity(0.4);
 
                     rectangleT.getStyleClass().add("rectT");
                     texteT.getStyleClass().add("textT");
